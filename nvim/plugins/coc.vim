@@ -43,6 +43,31 @@ endfunction
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
+" Use `[g` and `]g` to navigate diagnostics
+" Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
+nmap <silent> <leader>d <Plug>(coc-diagnostic-info)
+
+" GoTo code navigation.
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+nmap <silent> ]h <Plug>(coc-git-nextchunk)
+nmap <silent> [h <Plug>(coc-git-prevchunk)
+
+" apply autofix to problem on the current line.
+nmap <leader>af  <plug>(coc-fix-current)
+nmap <leader>am  <plug>(coc-format-selected)
+xmap <leader>am  <plug>(coc-format-selected)
+nmap <leader>ac  <Plug>(coc-codeaction)
+" Applying codeAction to the selected region.
+" Example: `<leader>aap` for current paragraph
+xmap <leader>a  <Plug>(coc-codeaction-selected)
+nmap <leader>a  <Plug>(coc-codeaction-selected)
+nmap <leader>ga  <Plug>(coc-codeaction-line)
 
 " Use K to show documentation in preview window.
 nnoremap <silent> K :call <SID>show_documentation()<CR>
