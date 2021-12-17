@@ -1,0 +1,6 @@
+Host source.developers.google.com
+    HostName source.developers.google.com
+    User davide.melli93@gmail.com
+    IdentityFile ~/.ssh/id_ed25519
+Host *
+    IdentityFile ~/.ssh/id_ed25519

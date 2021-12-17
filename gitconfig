@@ -1,0 +1,9 @@
+[user]
+	email = didi@leaf.space
+	name = didi
+[push]
+	followTags = true
+[alias]
+	pushall = !git remote | xargs -L1 git push --all
+[core]
+	editor = vim
