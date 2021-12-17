@@ -139,6 +139,7 @@ export NVM_DIR=~/.nvm
  [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
 # aliases
+alias n="nvim ."
 alias zshconfig="vi ~/.zshrc"
 alias dotfiles="cd ~/dotfiles"
 alias leaf="cd ~/leaf"
