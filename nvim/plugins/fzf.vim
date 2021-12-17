@@ -20,3 +20,6 @@ nmap <leader>h :History<cr>
 nmap <leader>r :Rg<cr>
 nmap <leader>R :Rg<space>
 nmap <leader>gb :GBranches<cr>
+
+nnoremap <leader>pv :Vex<CR>
+nnoremap <C-p> :GFiles<CR>

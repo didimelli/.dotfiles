@@ -41,6 +41,9 @@ nmap <leader>vr :source ~/.config/nvim/init.vim<cr>
 
 nmap <leader>u :undo;
 
+" Allow gf to open non-existent files
+map gf :edit <cfile><cr>
+
 " nerdtree
 nnoremap <leader>e :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTree<CR>
@@ -67,6 +70,7 @@ source ~/.config/nvim/plugins/dracula.vim
 source ~/.config/nvim/plugins/commentary.vim
 source ~/.config/nvim/plugins/nerdtree.vim
 source ~/.config/nvim/plugins/visual-multi.vim
+source ~/.config/nvim/plugins/sayonara.vim
 
 call plug#end()
 doautocmd User PlugLoaded
