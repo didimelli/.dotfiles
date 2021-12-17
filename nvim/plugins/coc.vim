@@ -9,6 +9,7 @@ let g:coc_global_extensions = [
     \ 'coc-sh',
     \ 'coc-sql',
     \ 'https://github.com/rodrigore/coc-tailwind-intellisense',
+    \ 'coc-pairs',
     \ 'coc-tsserver',
     \ '@yaegassy/coc-volar',
     \ 'coc-rust-analyzer',
@@ -61,5 +62,12 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " Add `:Format` command to format current buffer.
 command! -nargs=0 Format :call CocAction('format')
+
+
+" Add `:Fold` command to fold current buffer.
+command! -nargs=? Fold :call     CocAction('fold', <f-args>)
+
+" Add `:OR` command for organize imports of the current buffer.
+command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
 
 nmap <leader>l :CocFzfList<cr>

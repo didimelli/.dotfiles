@@ -22,5 +22,7 @@
 	"intelephense.environment.phpVersion": "8",
 	"tailwindCSS.validate": true,
 	"tailwindCSS.emmetCompletions": true,
-	"prettier.requireConfig": true
+	"prettier.requireConfig": true,
+    "python.linting.mypyEnabled": true,
+    "python.formatting.provider": true
 }
