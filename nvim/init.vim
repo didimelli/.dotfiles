@@ -7,9 +7,10 @@ set shiftwidth=4
 set tabstop=4
 set hidden
 set signcolumn=yes:2
-" set relativenumber
+set relativenumber
 set number
-" set termguicolors
+set termguicolors
+set guicursor=
 set undofile
 set spell
 set title
@@ -30,6 +31,7 @@ set noswapfile
 " set backupdir=~/.local/share/nvim/backup//
 set updatetime=300 " Reduce time for highlighting other references
 set redrawtime=10000 " Allow more time for loading syntax on large files
+let g:python3_host_prog='~/.pyenv/versions/pynvim/bin/python3'
 
 "--------------------------------------------------------------------------
 " Key maps
@@ -65,12 +67,14 @@ call plug#begin(data_dir . '/plugins')
 
 source ~/.config/nvim/plugins/coc.vim
 source ~/.config/nvim/plugins/fzf.vim
-source ~/.config/nvim/plugins/airline.vim
+" source ~/.config/nvim/plugins/airline.vim
 source ~/.config/nvim/plugins/dracula.vim
 source ~/.config/nvim/plugins/commentary.vim
 source ~/.config/nvim/plugins/nerdtree.vim
 source ~/.config/nvim/plugins/visual-multi.vim
 source ~/.config/nvim/plugins/sayonara.vim
+source ~/.config/nvim/plugins/lightline.vim
+source ~/.config/nvim/plugins/nord.vim
 
 call plug#end()
 doautocmd User PlugLoaded

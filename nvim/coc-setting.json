@@ -24,5 +24,6 @@
 	"tailwindCSS.emmetCompletions": true,
 	"prettier.requireConfig": true,
     "python.linting.mypyEnabled": true,
-    "python.formatting.provider": true
+    "python.formatting.provider": true,
+    "python.venvPath": "./.venv"
 }
