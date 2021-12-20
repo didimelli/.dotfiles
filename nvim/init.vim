@@ -39,6 +39,8 @@ let g:python3_host_prog='~/.pyenv/versions/pynvim/bin/python3'
 
 let mapleader = "\<space>"
 
+nmap <leader>ve :edit ~/.config/nvim/init.vim<cr>
+nmap <leader>vc :edit ~/.config/nvim/coc-settings.json<cr>
 nmap <leader>vr :source ~/.config/nvim/init.vim<cr>
 
 nmap <leader>u :undo<cr>
@@ -73,7 +75,7 @@ source ~/.config/nvim/plugins/commentary.vim
 source ~/.config/nvim/plugins/nerdtree.vim
 source ~/.config/nvim/plugins/visual-multi.vim
 source ~/.config/nvim/plugins/sayonara.vim
-" source ~/.config/nvim/plugins/lightline.vim
+source ~/.config/nvim/plugins/lightline.vim
 source ~/.config/nvim/plugins/nord.vim
 " source ~/.config/nvim/plugins/lsp.vim
 
