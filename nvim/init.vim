@@ -11,7 +11,7 @@ set relativenumber
 set number
 set termguicolors
 set guicursor=
-set undofile
+" set undofile
 set spell
 set title
 set ignorecase
@@ -41,7 +41,7 @@ let mapleader = "\<space>"
 
 nmap <leader>vr :source ~/.config/nvim/init.vim<cr>
 
-nmap <leader>u :undo;
+nmap <leader>u :undo<cr>
 
 " Allow gf to open non-existent files
 map gf :edit <cfile><cr>
@@ -73,8 +73,10 @@ source ~/.config/nvim/plugins/commentary.vim
 source ~/.config/nvim/plugins/nerdtree.vim
 source ~/.config/nvim/plugins/visual-multi.vim
 source ~/.config/nvim/plugins/sayonara.vim
-source ~/.config/nvim/plugins/lightline.vim
+" source ~/.config/nvim/plugins/lightline.vim
 source ~/.config/nvim/plugins/nord.vim
+" source ~/.config/nvim/plugins/lsp.vim
 
 call plug#end()
+
 doautocmd User PlugLoaded
