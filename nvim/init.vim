@@ -11,7 +11,7 @@ set relativenumber
 set number
 set termguicolors
 set guicursor=
-" set undofile
+set undofile
 set spell
 set title
 set ignorecase
@@ -77,10 +77,13 @@ source ~/.config/nvim/plugins/visual-multi.vim
 source ~/.config/nvim/plugins/sayonara.vim
 source ~/.config/nvim/plugins/lightline.vim
 source ~/.config/nvim/plugins/nord.vim
+source ~/.config/nvim/plugins/iceberg.vim
 " source ~/.config/nvim/plugins/lsp.vim
 
 call plug#end()
 
-colorscheme nord
+" colorscheme nord
+colorscheme iceberg
+
 
 doautocmd User PlugLoaded
