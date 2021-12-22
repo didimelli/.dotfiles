@@ -13,7 +13,8 @@ let g:coc_global_extensions = [
     \ 'coc-tsserver',
     \ '@yaegassy/coc-volar',
     \ 'coc-rust-analyzer',
-    \ 'coc-pyright'
+    \ 'coc-pyright',
+    \ 'coc-markdownlint'
 \ ]
 
 

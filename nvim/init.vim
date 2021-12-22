@@ -69,8 +69,6 @@ call plug#begin(data_dir . '/plugins')
 
 source ~/.config/nvim/plugins/coc.vim
 source ~/.config/nvim/plugins/fzf.vim
-" source ~/.config/nvim/plugins/airline.vim
-" source ~/.config/nvim/plugins/dracula.vim
 source ~/.config/nvim/plugins/commentary.vim
 source ~/.config/nvim/plugins/nerdtree.vim
 source ~/.config/nvim/plugins/visual-multi.vim
@@ -78,8 +76,11 @@ source ~/.config/nvim/plugins/sayonara.vim
 source ~/.config/nvim/plugins/lightline.vim
 source ~/.config/nvim/plugins/nord.vim
 source ~/.config/nvim/plugins/iceberg.vim
-" source ~/.config/nvim/plugins/lsp.vim
-
+source ~/.config/nvim/plugins/vim-tmux-navigator.vim
+source ~/.config/nvim/plugins/vim-fugitive.vim
+source ~/.config/nvim/plugins/markdown-preview.vim
+source ~/.config/nvim/plugins/swap-lines.vim
+ 
 call plug#end()
 
 " colorscheme nord
