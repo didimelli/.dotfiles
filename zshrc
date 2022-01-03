@@ -140,7 +140,7 @@ export NVM_DIR=~/.nvm
 
 # aliases
 alias n="nvim ."
-alias zshconfig="vi ~/.zshrc"
+alias zshconfig="nvim ~/.zshrc"
 alias dotfiles="cd ~/dotfiles"
 alias leaf="cd ~/leaf"
 alias xplore="explorer.exe ."
@@ -174,6 +174,8 @@ alias lk01='ssh root@10.0.59.50'
 alias au01='ssh root@10.0.4.65'
 alias test02='ssh root@10.0.2.21'
 alias se01='ssh root@10.0.58.50'
+alias is01='ssh root@10.0.48.50'
+alias au02='ssh root@10.0.49.50'
 
 
 # fzf
@@ -217,6 +219,9 @@ fi
 
 eval "$(starship init zsh)"
 # eval "$(oh-my-posh --init --shell zsh --config ~/.poshthemes/didi.omp.json)"
+
+# thefuck
+eval $(thefuck --alias)
 
 autoload -Uz compinit
 zstyle ':completion:*' menu select

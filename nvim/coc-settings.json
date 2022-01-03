@@ -25,6 +25,7 @@
     "coc.preferences.formatOnSaveFiletypes": [
         "python",
         "rust",
-        "json"
+        "json",
+        "sql"
     ]
 }
