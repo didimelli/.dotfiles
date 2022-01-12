@@ -68,9 +68,11 @@ endif
 call plug#begin(data_dir . '/plugins')
 
 source ~/.config/nvim/plugins/coc.vim
-source ~/.config/nvim/plugins/fzf.vim
+" source ~/.config/nvim/plugins/fzf.vim
+source ~/.config/nvim/plugins/telescope.vim
+source ~/.config/nvim/plugins/telescope-browser.vim
 source ~/.config/nvim/plugins/commentary.vim
-source ~/.config/nvim/plugins/nerdtree.vim
+" source ~/.config/nvim/plugins/nerdtree.vim
 source ~/.config/nvim/plugins/visual-multi.vim
 source ~/.config/nvim/plugins/sayonara.vim
 source ~/.config/nvim/plugins/lightline.vim
@@ -81,9 +83,35 @@ source ~/.config/nvim/plugins/vim-fugitive.vim
 source ~/.config/nvim/plugins/markdown-preview.vim
 source ~/.config/nvim/plugins/swap-lines.vim
 source ~/.config/nvim/plugins/floaterm.vim
+" source ~/.config/nvim/plugins/autosave.vim
  
 call plug#end()
 
+lua << EOF
+require("telescope").load_extension "file_browser"
+EOF
+
+" lua << EOF
+" local autosave = require("autosave")
+
+" autosave.setup(
+"     {
+"         enabled = true,
+"         execution_message = "AutoSave: saved at " .. vim.fn.strftime("%H:%M:%S"),
+"         events = {"InsertLeave", "TextChanged"},
+"         conditions = {
+"             exists = true,
+"             filename_is_not = {},
+"             filetype_is_not = {},
+"             modifiable = true
+"         },
+"         write_all_buffers = false,
+"         on_off_commands = true,
+"         clean_command_line_interval = 0,
+"         debounce_delay = 500
+"     }
+" )
+" EOF
 " colorscheme nord
 colorscheme iceberg
 

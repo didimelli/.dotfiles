@@ -171,7 +171,7 @@ alias sshnuron='ssh root@10.164.0.2'
 alias uk01='ssh root@10.0.61.50'
 alias bg02='ssh root@10.0.60.50'
 alias lk01='ssh root@10.0.59.50'
-alias au01='ssh root@10.0.4.65'
+alias au01='ssh root@10.0.62.50'
 alias test02='ssh root@10.0.2.21'
 alias se01='ssh root@10.0.58.50'
 alias is01='ssh root@10.0.48.50'
@@ -187,6 +187,7 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 export PATH="$PATH:/home/didi/.local/bin"
 eval "$(pyenv virtualenv-init -)"
+export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 
 # tmux
 if [ -z "$TMUX" ]
@@ -226,3 +227,4 @@ eval $(thefuck --alias)
 autoload -Uz compinit
 zstyle ':completion:*' menu select
 fpath+=~/.zfunc
+export PATH=~/bin:$PATH
