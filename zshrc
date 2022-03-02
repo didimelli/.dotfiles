@@ -190,10 +190,17 @@ eval "$(pyenv virtualenv-init -)"
 export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 
 # tmux
-if [ -z "$TMUX" ]
+#if [ -z "$TMUX" ]
+#then
+#            cd ~;
+#                tmux attach -t TMUX || tmux new -s TMUX
+#fi
+
+# zellij
+if [ -z "$ZELLIJ" ]
 then
             cd ~;
-                tmux attach -t TMUX || tmux new -s TMUX
+                zellij
 fi
 
 # exa
@@ -220,9 +227,6 @@ fi
 
 eval "$(starship init zsh)"
 # eval "$(oh-my-posh --init --shell zsh --config ~/.poshthemes/didi.omp.json)"
-
-# thefuck
-eval $(thefuck --alias)
 
 autoload -Uz compinit
 zstyle ':completion:*' menu select
