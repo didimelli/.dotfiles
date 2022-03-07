@@ -176,7 +176,9 @@ alias test02='ssh root@10.0.2.21'
 alias se01='ssh root@10.0.58.50'
 alias is01='ssh root@10.0.48.50'
 alias au02='ssh root@10.0.49.50'
-
+alias gse='ssh root@10.0.4.13'
+alias labtest02='ssh root@10.0.4.140'
+alias labtest20='ssh root@10.0.4.38'
 
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -232,3 +234,4 @@ autoload -Uz compinit
 zstyle ':completion:*' menu select
 fpath+=~/.zfunc
 export PATH=~/bin:$PATH
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
