@@ -8,7 +8,6 @@ let g:coc_global_extensions = [
     \ 'coc-json',
     \ 'coc-sh',
     \ 'coc-sql',
-    \ 'https://github.com/rodrigore/coc-tailwind-intellisense',
     \ 'coc-pairs',
     \ 'coc-tsserver',
     \ '@yaegassy/coc-volar',

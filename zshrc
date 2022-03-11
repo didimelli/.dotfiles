@@ -140,6 +140,7 @@ export NVM_DIR=~/.nvm
 
 # aliases
 alias n="nvim ."
+alias vim="nvim"
 alias zshconfig="nvim ~/.zshrc"
 alias dotfiles="cd ~/dotfiles"
 alias leaf="cd ~/leaf"
@@ -192,18 +193,18 @@ eval "$(pyenv virtualenv-init -)"
 export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 
 # tmux
-#if [ -z "$TMUX" ]
-#then
-#            cd ~;
-#                tmux attach -t TMUX || tmux new -s TMUX
-#fi
-
-# zellij
-if [ -z "$ZELLIJ" ]
+if [ -z "$TMUX" ]
 then
             cd ~;
-                zellij
+                tmux attach -t TMUX || tmux new -s TMUX
 fi
+
+# zellij
+# if [ -z "$ZELLIJ" ]
+# then
+#            cd ~;
+#                zellij
+# fi
 
 # exa
 if [ "$(command -v exa)" ]; then
