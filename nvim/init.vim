@@ -82,7 +82,8 @@ source ~/.config/nvim/plugins/swap-lines.vim
 source ~/.config/nvim/plugins/floaterm.vim
 source ~/.config/nvim/plugins/sneak.vim
 source ~/.config/nvim/plugins/match.vim
- 
+Plug 'ryanoasis/vim-devicons'
+
 call plug#end()
 
 " colorscheme nord
