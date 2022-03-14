@@ -19,9 +19,10 @@
     "tailwindCSS.emmetCompletions": true,
     "prettier.requireConfig": true,
     "python.venvPath": "./.venv",
-    "python.analysis.typeCheckingMode": "strict",
+    "python.analysis.typeCheckingMode": "basic",
     "python.formatting.provider": "black",
     "python.linting.mypyEnabled": true,
+    "python.linting.pylintEnabled": true,
     "coc.preferences.formatOnSaveFiletypes": [
         "python",
         "rust",

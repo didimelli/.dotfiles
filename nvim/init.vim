@@ -43,16 +43,21 @@ nmap <leader>ve :edit ~/.config/nvim/init.vim<cr>
 nmap <leader>vc :edit ~/.config/nvim/coc-settings.json<cr>
 nmap <leader>vr :source ~/.config/nvim/init.vim<cr>
 
-nmap <leader>u :undo<cr>
+nnoremap <leader>pv :Vex<CR>
+nnoremap <leader>pf :Files<CR>
+inoremap jk <esc>:w<CR>
+" open new split panes to right and below
+set splitright
+set splitbelow
 
 " Allow gf to open non-existent files
 map gf :edit <cfile><cr>
 
 " nerdtree
-nnoremap <leader>e :NERDTreeFocus<CR>
-nnoremap <C-n> :NERDTree<CR>
-nnoremap <C-t> :NERDTreeToggle<CR>
-nnoremap <C-f> :NERDTreeFind<CR>
+" nnoremap <leader>e :NERDTreeFocus<CR>
+" nnoremap <C-n> :NERDTree<CR>
+" nnoremap <C-t> :NERDTreeToggle<CR>
+" nnoremap <C-f> :NERDTreeFind<CR>
 
 "--------------------------------------------------------------------------
 " Plugins
