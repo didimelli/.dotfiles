@@ -83,6 +83,8 @@ source ~/.config/nvim/plugins/floaterm.vim
 source ~/.config/nvim/plugins/sneak.vim
 source ~/.config/nvim/plugins/match.vim
 Plug 'ryanoasis/vim-devicons'
+Plug 'gkeep/iceberg-dark'
+let g:lightline = { 'colorscheme': 'icebergDark' }
 
 call plug#end()
 
@@ -91,5 +93,6 @@ colorscheme iceberg
 
 " Quick-save
 nmap <leader>w :w<CR>
+nmap <leader>q :q<CR>
 
 doautocmd User PlugLoaded
