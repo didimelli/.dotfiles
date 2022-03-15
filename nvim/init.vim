@@ -53,6 +53,10 @@ set splitbelow
 " Allow gf to open non-existent files
 map gf :edit <cfile><cr>
 
+" remap for indent/dedent
+:noremap <C-]> >>
+:noremap <C-[> <<
+
 " nerdtree
 " nnoremap <leader>e :NERDTreeFocus<CR>
 " nnoremap <C-n> :NERDTree<CR>
@@ -90,6 +94,7 @@ source ~/.config/nvim/plugins/match.vim
 Plug 'ryanoasis/vim-devicons'
 Plug 'gkeep/iceberg-dark'
 let g:lightline = { 'colorscheme': 'icebergDark' }
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 call plug#end()
 
