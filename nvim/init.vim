@@ -54,8 +54,8 @@ set splitbelow
 map gf :edit <cfile><cr>
 
 " remap for indent/dedent
-:noremap <C-]> >>
-:noremap <C-[> <<
+:noremap <C-]> > gv
+:noremap <C-[> < gv
 
 " nerdtree
 " nnoremap <leader>e :NERDTreeFocus<CR>
