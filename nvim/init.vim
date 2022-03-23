@@ -43,7 +43,6 @@ nmap <leader>ve :edit ~/.config/nvim/init.vim<cr>
 nmap <leader>vc :edit ~/.config/nvim/coc-settings.json<cr>
 nmap <leader>vr :source ~/.config/nvim/init.vim<cr>
 
-nnoremap <leader>pv :Vex<CR>
 nnoremap <leader>pf :Files<CR>
 inoremap jk <esc>:w<CR>
 " open new split panes to right and below
@@ -95,6 +94,9 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'gkeep/iceberg-dark'
 let g:lightline = { 'colorscheme': 'icebergDark' }
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'mrjones2014/legendary.nvim'
+Plug 'stevearc/dressing.nvim'
+Plug 'mrjones2014/smart-splits.nvim'
 
 call plug#end()
 
@@ -104,5 +106,6 @@ colorscheme iceberg
 " Quick-save
 nmap <leader>w :w<CR>
 nmap <leader>q :q<CR>
+nmap <CS-p> :Legendary<CR>
 
 doautocmd User PlugLoaded
