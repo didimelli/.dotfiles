@@ -90,6 +90,7 @@ source ~/.config/nvim/plugins/swap-lines.vim
 source ~/.config/nvim/plugins/floaterm.vim
 source ~/.config/nvim/plugins/sneak.vim
 source ~/.config/nvim/plugins/match.vim
+source ~/.config/nvim/plugins/nvimtree.vim
 Plug 'ryanoasis/vim-devicons'
 Plug 'gkeep/iceberg-dark'
 let g:lightline = { 'colorscheme': 'icebergDark' }
