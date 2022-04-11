@@ -7,3 +7,5 @@
 	pushall = !git remote | xargs -L1 git push --all
 [core]
 	editor = vim
+[init]
+	defaultBranch = main

@@ -50,9 +50,6 @@ let g:nvim_tree_icons = {
     \   }
     \ }
 
-lua << EOF
-require'nvim-tree'.setup { view = { side = 'right' } }
-EOF
 
 nnoremap <leader>t :NvimTreeToggle<CR>
 nnoremap <leader>r :NvimTreeRefresh<CR>

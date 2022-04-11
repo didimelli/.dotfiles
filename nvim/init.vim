@@ -53,8 +53,8 @@ set splitbelow
 map gf :edit <cfile><cr>
 
 " remap for indent/dedent
-:noremap <C-]> > gv
-:noremap <C-[> < gv
+" :noremap <C-]> > gv
+" :noremap <C-[> < gv
 
 " nerdtree
 " nnoremap <leader>e :NERDTreeFocus<CR>
@@ -101,12 +101,17 @@ Plug 'mrjones2014/smart-splits.nvim'
 
 call plug#end()
 
+
+lua << EOF
+require'nvim-tree'.setup { view = { side = 'right' } }
+EOF
+
 " colorscheme nord
 colorscheme iceberg
 
 " Quick-save
 nmap <leader>w :w<CR>
-nmap <leader>q :q<CR>
+" nmap <leader>q :q<CR>
 nmap <CS-p> :Legendary<CR>
 
 doautocmd User PlugLoaded
