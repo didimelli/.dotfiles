@@ -13,4 +13,5 @@
     ~/.zshenv: zshenv
     ~/.zshrc: zshrc
     ~/.config/nvim: nvim
+    ~/.tmux: tmux
 
