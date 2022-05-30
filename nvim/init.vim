@@ -92,12 +92,12 @@ source ~/.config/nvim/plugins/sneak.vim
 source ~/.config/nvim/plugins/match.vim
 source ~/.config/nvim/plugins/nvimtree.vim
 Plug 'ryanoasis/vim-devicons'
-Plug 'gkeep/iceberg-dark'
-let g:lightline = { 'colorscheme': 'icebergDark' }
+" Pug 'gkeep/iceberg-dark'
+let g:lightline = { 'colorscheme': 'catppuccin' }
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'mrjones2014/legendary.nvim'
 Plug 'stevearc/dressing.nvim'
 Plug 'mrjones2014/smart-splits.nvim'
+Plug 'catppuccin/nvim', {'as': 'catppuccin'}
 
 call plug#end()
 
@@ -107,7 +107,9 @@ require'nvim-tree'.setup { view = { side = 'right' } }
 EOF
 
 " colorscheme nord
-colorscheme iceberg
+" colorscheme iceberg
+let g:catppuccin_flavour = "dusk" " latte, frappe, macchiato, mocha
+colorscheme catppuccin
 
 " Quick-save
 nmap <leader>w :w<CR>
