@@ -180,6 +180,7 @@ alias au02='ssh root@10.0.49.50'
 alias gse='ssh root@10.0.4.13'
 alias labtest02='ssh root@10.0.4.140'
 alias labtest20='ssh root@10.0.4.38'
+alias az01='ssh root@10.0.64.50'
 
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -218,10 +219,10 @@ if [ "$(command -v exa)" ]; then
 fi
 
 # bat
-if [ "$(command -v bat)" ]; then
-  unalias -m 'cat'
-  alias cat='bat --theme="Dracula"'
-fi
+# if [ "$(command -v bat)" ]; then
+#   unalias -m 'cat'
+#   alias cat='bat --theme="Dracula"'
+# fi
 
 # again pyenv
 if command -v pyenv 1>/dev/null 2>&1; then
