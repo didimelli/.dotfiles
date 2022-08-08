@@ -181,6 +181,8 @@ alias gse='ssh root@10.0.4.13'
 alias labtest02='ssh root@10.0.4.140'
 alias labtest20='ssh root@10.0.4.38'
 alias az01='ssh root@10.0.64.50'
+alias pt03='ssh root@10.0.55.51'
+alias uk0102='ssh root@10.0.61.70'
 
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
