@@ -15,9 +15,6 @@ ZSH_THEME=""
 plugins=(
     git
     zsh-autosuggestions
-    kubectl
-    poetry
-    docker
 )
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -152,9 +149,10 @@ alias gpa="git remote | xargs -L1 git push --all"
 alias reload="source ~/.zshrc"
 alias esoc="ssh root@10.0.4.20"
 alias lt01="ssh root@10.0.50.50"
-alias es01="ssh root@10.0.51.50"
+alias es0101="ssh root@10.0.51.50"
 alias it0101="ssh root@10.0.52.50"
 alias ie01="ssh root@10.0.53.50"
+alias ae0101="ssh root@10.0.63.50"
 alias us01="ssh root@10.0.54.50"
 alias pt0102="ssh root@10.0.55.50"
 alias it0201="ssh root@10.0.14.50"
@@ -183,6 +181,7 @@ alias labtest20='ssh root@10.0.4.38'
 alias az0101='ssh root@10.0.64.50'
 alias pt0103='ssh root@10.0.55.51'
 alias uk0102='ssh root@10.0.61.70'
+alias au0202='ssh root@10.0.49.51'
 
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -234,6 +233,9 @@ fi
 
 eval "$(starship init zsh)"
 # eval "$(oh-my-posh --init --shell zsh --config ~/.poshthemes/didi.omp.json)"
+
+# gvm
+source /home/didi/.gvm/scripts/gvm
 
 autoload -Uz compinit
 zstyle ':completion:*' menu select
