@@ -5,8 +5,6 @@ export ZSH="/home/didi/.oh-my-zsh"
 source $ZSH/oh-my-zsh.sh
 fpath=(~/.zsh/completion $fpath)
 
-ZSH_THEME=""
-
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -109,31 +107,26 @@ export POETRY_VIRTUALENVS_PATH=~/envs
 export WORKON_HOME=/home/didi/envs
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 
-
-# deno
-export DENO_INSTALL="/home/didi/.deno"
-export PATH="$DENO_INSTALL/bin:$PATH"
-
 # lazy node
-# lazynvm() {
-#     unset -f nvm node npm
-#       export NVM_DIR=~/.nvm
-#         [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-#       }
-# nvm() {
-#     lazynvm
-#       nvm $@
-#     }
-# node() {
-#     lazynvm
-#       node $@
-#     }
-# npm() {
-#     lazynvm
-#       npm $@
-#     }
-export NVM_DIR=~/.nvm
- [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+lazynvm() {
+    unset -f nvm node npm
+      export NVM_DIR=~/.nvm
+        [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+      }
+nvm() {
+    lazynvm
+      nvm $@
+    }
+node() {
+    lazynvm
+      node $@
+    }
+npm() {
+    lazynvm
+      npm $@
+    }
+# export NVM_DIR=~/.nvm
+# [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
 # aliases
 alias n="nvim ."
@@ -188,12 +181,19 @@ alias au0202='ssh root@10.0.49.51'
 export FZF_DEFAULT_OPTS='--color=bg+:#302D41,bg:#1E1E2E,spinner:#F8BD96,hl:#F28FAD --color=fg:#D9E0EE,header:#F28FAD,info:#DDB6F2,pointer:#F8BD96 --color=marker:#F8BD96,fg+:#F2CDCD,prompt:#DDB6F2,hl+:#F28FAD'
 
 # pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-export PATH="$PATH:/home/didi/.local/bin"
-eval "$(pyenv virtualenv-init -)"
-export PYENV_VIRTUALENV_DISABLE_PROMPT=1
+lazypyenv() {
+    unset -f pyenv
+    export PYENV_ROOT="$HOME/.pyenv"
+    export PATH="$PYENV_ROOT/bin:$PATH"
+    eval "$(pyenv init -)"
+    export PATH="$PATH:/home/didi/.local/bin"
+    eval "$(pyenv virtualenv-init -)"
+    export PYENV_VIRTUALENV_DISABLE_PROMPT=1
+}
+pyenv() {
+    lazypyenv
+    pyenv $@
+}
 
 # tmux
 if [ -z "$TMUX" ]
@@ -226,10 +226,10 @@ fi
 # fi
 
 # again pyenv
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
-  eval "$(pyenv init --path)"
-fi
+# if command -v pyenv 1>/dev/null 2>&1; then
+#   eval "$(pyenv init -)"
+#   eval "$(pyenv init --path)"
+# fi
 
 eval "$(starship init zsh)"
 # eval "$(oh-my-posh --init --shell zsh --config ~/.poshthemes/didi.omp.json)"
@@ -241,4 +241,3 @@ autoload -Uz compinit
 zstyle ':completion:*' menu select
 fpath+=~/.zfunc
 export PATH=~/bin:$PATH
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
