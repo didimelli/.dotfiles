@@ -1,3 +1,7 @@
+- defaults:
+    link:
+      relink: true
+
 - clean: ['~']
 
 - link:
@@ -12,6 +16,26 @@
     ~/.zprofile: zprofile
     ~/.zshenv: zshenv
     ~/.zshrc: zshrc
-    ~/.config/nvim: nvim
+    ~/.config/nvim: 
+        path: nvim
+        create: true
     ~/.tmux: tmux
+
+- clean: ['~']
+
+- link:
+    ~/.profile: profile
+    ~/.bashrc: bashrc
+    ~/.bash_logout: bash_logout
+
+
+- clean: ['~']
+
+- link:
+
+
+- clean: ['~']
+
+- link:
+
 

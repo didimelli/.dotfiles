@@ -108,23 +108,23 @@ export WORKON_HOME=/home/didi/envs
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 
 # lazy node
-lazynvm() {
-    unset -f nvm node npm
-      export NVM_DIR=~/.nvm
-        [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-      }
-nvm() {
-    lazynvm
-      nvm $@
-    }
-node() {
-    lazynvm
-      node $@
-    }
-npm() {
-    lazynvm
-      npm $@
-    }
+# lazynvm() {
+#     unset -f nvm node npm
+#       export NVM_DIR=~/.nvm
+#         [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+#       }
+# nvm() {
+#     lazynvm
+#       nvm $@
+#     }
+# node() {
+#     lazynvm
+#       node $@
+#     }
+# npm() {
+#     lazynvm
+#       npm $@
+#     }
 # export NVM_DIR=~/.nvm
 # [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
@@ -184,7 +184,7 @@ export FZF_DEFAULT_OPTS='--color=bg+:#302D41,bg:#1E1E2E,spinner:#F8BD96,hl:#F28F
 
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
-export PATH="$PATH:/home/didi/.local/bin"
+
 export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 lazypyenv() {
     unset -f pyenv python
@@ -239,7 +239,12 @@ fi
 #   eval "$(pyenv init -)"
 #   eval "$(pyenv init --path)"
 # fi
+# snap
 
+
+export PATH="$PATH:/snap/bin/"
+
+#
 eval "$(starship init zsh)"
 # eval "$(oh-my-posh --init --shell zsh --config ~/.poshthemes/didi.omp.json)"
 
