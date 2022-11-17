@@ -255,3 +255,4 @@ autoload -Uz compinit
 zstyle ':completion:*' menu select
 fpath+=~/.zfunc
 export PATH=~/bin:$PATH
+export PATH=~/.local/bin:$PATH
